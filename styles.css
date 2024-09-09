@@ -1,0 +1,100 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    color: #444;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+/* Styles for the theme toggle button */
+#page-banner {
+    position: relative;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+}
+/* Styles for book list */
+#book-list ul li {
+    padding: 20px;
+    border-left: 5px solid #ddd;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#book-list ul li:hover {
+    border-color: #9361bf;
+    background-color: #f9f9f9;
+}
+/* Styles for the delete button  */
+.delete {
+    float: right;
+    background-color: #9361bf;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+    background-color: #333;
+}
+/* Dark mode style */
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme #container {
+    background-color: #444;
+    border: 1px solid #666;
+}
+
+.dark-theme #page-banner {
+    background-color: #555;
+}
+
+.dark-theme #book-list ul li {
+    border-color: #666;
+}
+
+.dark-theme #book-list ul li:hover {
+    border-color: #bbb;
+}
+
+.dark-theme .delete {
+    background-color: #bbb;
+}
+
+.dark-theme .delete:hover {
+    background-color: #888;
+}
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s ease-out;
+}

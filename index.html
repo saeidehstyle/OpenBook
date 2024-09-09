@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenBook - JavaScript DOM Tutorial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container" class="container mt-5">
+        <!-- Page Header -->
+        <header class="mb-4">
+            <!-- Banner -->
+            <div id="page-banner" class="bg-light py-3 px-4 rounded">
+                <h1 class="title text-center">OpenBook</h1>
+                <form id="search-books" class="text-center">
+                    <input type="text" class="form-control w-50 mx-auto" placeholder="Search in books...">
+                </form>
+                <!-- Theme toggle button (light/ dark mode) -->
+                <button id="theme-toggle" class="btn btn-light float-right" aria-label="Toggle theme">🌙</button>
+            </div>
+        </header>
+        <!-- BOOK list -->
+        <div id="book-list" class="mb-4">
+            <h2 class="title">Recent books</h2>
+            <ul class="list-group">
+                <!-- List items will be dynamically generated -->
+            </ul>
+        </div>
+
+        <!-- Form to hide or show books list -->
+        <form id="hide" class="form-inline mb-4">
+            <input type="checkbox" id="hide-books" class="form-check-input mr-2">
+            <label for="hide-books" class="form-check-label">Hide books</label>
+        </form>
+
+        <!-- Button to trigger modal for a new book  -->
+        <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#addBookModal">
+            Add new book
+        </button>
+
+        <!-- Modal for adding a new book -->
+        <div class="modal fade" id="addBookModal" tabindex="-1" role="dialog" aria-labelledby="addBookModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- Modal header with title and close button -->
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addBookModalLabel">Add New Book</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- Modal body with input field for new book name -->
+                    <div class="modal-body">
+                        <input type="text" id="newBookName" class="form-control" placeholder="Book name...">
+                    </div>
+                    <!-- Modal footer with close and add buttons -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" id="addBookFromModal" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
